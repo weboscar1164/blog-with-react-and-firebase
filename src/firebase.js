@@ -16,6 +16,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+
+// ログイン時にアカウント選択できるようにする
+provider.setCustomParameters({
+	prompt: "select_account",
+});
+
 const db = getFirestore(app);
 
 export { auth, provider, db };
