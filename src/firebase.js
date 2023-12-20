@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// ログイン時にアカウント選択できるようにする
+// ログイン時にアカウント選択できるようにする　https://chaika.hatenablog.com/entry/2023/09/29/083000
 provider.setCustomParameters({
 	prompt: "select_account",
 });
