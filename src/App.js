@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import { useState } from "react";
 
 function App() {
-	const [isAuth, setIsAuth] = useState(false);
+	const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 	return (
 		<Router>
 			<Navbar isAuth={isAuth} />
